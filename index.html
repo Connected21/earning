@@ -368,6 +368,8 @@ var Counter = {
         {
             if (Counter.Score >= 1)
             {
+		    Counter.Score -= 0.5;
+           
      
                 Counter.Refresh("aside#score > span", Counter.Score);
             }
@@ -410,7 +412,7 @@ document.addEventListener('DOMContentLoaded', function()
 {
     document.getElementById("start-reset").addEventListener("click", function()
     {
-        Counter.Initialize(60);
+        Counter.Initialize(20);
         Counter.IsStoped ? Counter.Launch() : Counter.Stop();
         Counter.CheckClickOnRightAnswer();
     });
