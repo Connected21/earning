@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function()
 {
     document.getElementById("start-reset").addEventListener("click", function()
     {
-        Counter.Initialize(2);
+        Counter.Initialize(60);
         Counter.IsStoped ? Counter.Launch() : Counter.Stop();
         Counter.CheckClickOnRightAnswer();
     });
