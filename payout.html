@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Score</title>
+     <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+</head>
+<style type="text/css">
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eee;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  color: #222;
+}
+
+.score{
+	font-size: 20px;
+	text-align: center;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	margin-bottom: 14px;
+	margin-top: 8px;
+}
+
+.pay{
+	text-align: center;
+	font-size: 26px;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    margin-bottom: 18px;
+}
+
+#form {
+  max-width: 700px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.form-field {
+  display: flex;
+  margin: 0 0 1rem 0;
+}
+label, input {
+  width: 70%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  font-size: 14px;
+}
+label {
+  text-align: right;
+  width: 30%;
+}
+input {
+  border: 2px solid #aaa;
+  border-radius: 2px;
+}
+
+.details{
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+</style>
+<body>
+<div class="score">
+    <p>Total Earned Points</p>
+    <p id="score">00</p>
+    </div>
+    <form method="post" action="file:///C:/Users/Connected/Desktop/PhEarning/index.html#" id="form" class="validate">
+  <div class="form-field">
+    <label for="full-name">Full Name</label>
+    <input type="text" name="full-name" id="full-name" placeholder="Ivan Afan" required />
+  </div>
+  <div class="form-field">
+    <label for="email-address">Email Address</label>
+    <input type="text" name="full-name" id="full-name" placeholder="Ivanafan@gmail.com" required />
+  </div>
+  <div class="form-field">
+  	 <label for="cars">Which MOP</label>
+  <select id="mop" name="mop">
+    <option value="mopp">GCASH</option>
+    <option value="saab">BPI</option>
+    <option value="fiat">BDO</option>
+    <option value="audi">PAYPAL</option>
+  </select>
+  </div>
+  <div class="pay">
+  <p>Payout Details</p>
+  </div>
+ <div class="form-field">
+    <label for="account-name">Account Name</label>
+    <input type="text" name="full-name" id="full-name" placeholder="Ivan Afan" required />
+  </div>
+  <div class="form-field">
+    <label for="account-number">Account Number</label>
+    <input type="text" name="full-name" id="full-name" placeholder="1890848869" required />
+  </div>
+  <div class="form-field">
+    <label for="full-name">Contact Number</label>
+    <input type="text" name="full-name" id="full-name" placeholder="0945802788" required />
+  </div>
+  <div class="form-field">
+    <label for=""></label>
+    <input type="submit" value="Request Payout" />
+  </div>
+</form>
+
+<div class="details">
+<h2> About Payout</h2>
+<p>To request a payout please fill-up the information needed. Your total earned points will be times(x) in 6php which is 6php per correct anwser and divide by 4. Why do we need to divide it? Even though you payed for registration fee, that will not be enough to pay you and for our workers and also our commission.</p>
+</div>
+    <script>
+        document.getElementById("score").innerHTML = localStorage.getItem("total_score");
+    </script>
+</body>
+</html>
